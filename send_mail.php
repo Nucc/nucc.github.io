@@ -1,12 +1,12 @@
 <?php
-	$to = "jdrendon@imaginacionweb.net"; /*Your Email*/
+	$to = "nucc@bteam.hu"; /*Your Email*/
 	$subject = "Messsage from website"; /*Issue*/
-	$date = date ("l, F jS, Y"); 
-	$time = date ("h:i A"); 	
+	$date = date ("l, F jS, Y");
+	$time = date ("h:i A");
 	$msg="
 	Name: $_REQUEST[Name]
 	Email: $_REQUEST[Email]
-	
+
 	Message sent from website on date  $date, hour: $time.\n
 
 	Message:
