@@ -553,6 +553,10 @@ footer h6{
 /* ---------------------------------------------------------------------- */
 @media handheld, only screen and (max-width: 767px) {
 
+  a {
+    font-size: 12px !important;
+  }
+
 	#menu{
 		display: none;
 	}
@@ -591,6 +595,7 @@ footer h6{
 		display: none;
 	}
 	.me img{
+    max-width: 320px;
 		width: 100%;
 	}
 	.title_area h1{
