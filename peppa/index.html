@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Motion Ball Controller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Peppa & George Adventure</h1>
+        <div class="game-area">
+            <canvas id="waterCanvas"></canvas>
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            <div class="ball right-ball" id="rightBall"></div>
+            <div class="ball left-ball" id="leftBall"></div>
+        </div>
+        <button class="help-button" id="helpButton">?</button>
+        
+        <div class="help-modal" id="helpModal">
+            <div class="help-content">
+                <span class="close-button" id="closeButton">&times;</span>
+                <h2>Peppa & George Adventure Game</h2>
+                <p>Help Peppa and George collect dinosaurs while avoiding monsters!</p>
+                <p><span style="color: #ff69b4;">🐷 Peppa (Pink)</span> = Right hand | <span style="color: #4a90e2;">🐷 George (Blue)</span> = Left hand</p>
+                <p><strong>Good Items:</strong> 🦕 Dinosaurs = +1 point each</p>
+                <p><strong>Bad Items:</strong> 👹 Monsters = -1 life each</p>
+                <p><strong>Lives:</strong> Start with 3 lives, lose when all lives are gone</p>
+                <p><strong>Controls:</strong> Move both hands to control both characters</p>
+                <p><strong>Difficulty:</strong> Items fall faster and spawn more frequently as you progress</p>
+                <p>Watch the water ripple as they move around!</p>
+                <p><small>Add #cam to the URL to show camera feed</small></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+    <script src="script.js"></script>
+</body>
+</html>
