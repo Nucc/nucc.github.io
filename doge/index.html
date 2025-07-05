@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Motion Ball Controller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ball Dodge Game</h1>
+        <div class="game-area">
+            <canvas id="waterCanvas"></canvas>
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            <div class="ball right-ball" id="rightBall"></div>
+            <div class="ball left-ball" id="leftBall"></div>
+        </div>
+        <button class="help-button" id="helpButton">?</button>
+        
+        <div class="help-modal" id="helpModal">
+            <div class="help-content">
+                <span class="close-button" id="closeButton">&times;</span>
+                <h2>Ball Dodge Game</h2>
+                <p>Move your hands to control the colored balls and avoid the falling white balls!</p>
+                <p><span style="color: #4ade80;">Green ball</span> = Right hand | <span style="color: #fbbf24;">Yellow ball</span> = Left hand</p>
+                <p><strong>Objective:</strong> Dodge white balls falling from the top</p>
+                <p><strong>Lives:</strong> You start with 3 lives - lose one when any ball touches a white ball</p>
+                <p><strong>Scoring:</strong> Earn 10 points for each white ball that passes safely</p>
+                <p><strong>Difficulty:</strong> Game gets faster and spawns more balls as your score increases</p>
+                <p>Water ripples when you move and when balls collide!</p>
+                <p><small>Add #cam to the URL to show camera feed</small></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+    <script src="script.js"></script>
+</body>
+</html>

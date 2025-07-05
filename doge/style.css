@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: white;
+    z-index: 20;
+}
+
+.game-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#waterCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+    z-index: 1;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    z-index: 2;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    z-index: 3;
+}
+
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.1s ease-out;
+    z-index: 15;
+}
+
+.right-ball {
+    background: radial-gradient(circle at 30% 30%, #4ade80, #22c55e);
+}
+
+.left-ball {
+    background: radial-gradient(circle at 30% 30%, #fbbf24, #f59e0b);
+}
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    z-index: 30;
+    transition: all 0.3s ease;
+}
+
+.help-button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.1);
+}
+
+.help-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.help-modal.show {
+    display: flex;
+}
+
+.help-content {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.help-content h2 {
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+}
+
+.help-content p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: white;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .help-content {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .help-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .help-content p {
+        font-size: 1rem;
+    }
+}
