@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolf - TypeScript Golf Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #2d5a27;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        #game-container {
+            border: 2px solid #8B4513;
+            background-color: #3d7c47;
+            position: relative;
+        }
+        
+        canvas {
+            display: block;
+            background-color: #4a934a;
+        }
+        
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        #power-meter {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+            height: 20px;
+            border: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        #power-bar {
+            height: 100%;
+            background: linear-gradient(to right, green, yellow, red);
+            width: 0%;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="controls">
+            <div>Use ← → arrows to aim</div>
+            <div>Hold SPACE to set power</div>
+            <div>Press T to select track</div>
+        </div>
+        <div id="power-meter">
+            <div id="power-bar"></div>
+        </div>
+    </div>
+    
+    <script src="game.js?v=7"></script>
+</body>
+</html>
